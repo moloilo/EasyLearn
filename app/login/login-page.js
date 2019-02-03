@@ -21,25 +21,28 @@ exports.toggleDisplay = function () {
     user.set('isLoggingIn', isLoggingIn);
 };
 
-exports.submit = function () {
-    if (isLoggingIn) {
-        login();
+function submit(args) {
+     if (isLoggingIn) {
+        login(args);
     } else {
         signUp();
     }
 };
 
-function login() {
+function login(args) {
     user.login()
         .catch(function (error) {
-            dialogsModule.alert({
+            const button = args.object;
+            button.page.frame.navigate({ moduleName: "tabs/tabs-page", clearHistory: true });
+            /*dialogsModule.alert({
                 message: "Unfortunately we could not find your account.",
                 okButtonText: "OK"
             });
-            return Promise.reject();
+            return Promise.reject();*/
         })
         .then(function () {
-            frameModule.topmost().navigate("views/list/list-page");
+            const button = args.object;
+            button.page.frame.navigate({ moduleName: "tabs/tabs-page", clearHistory: true });
         });
 };
 
@@ -59,3 +62,5 @@ function signUp() {
             });
     });
 };
+
+exports.submit = submit;

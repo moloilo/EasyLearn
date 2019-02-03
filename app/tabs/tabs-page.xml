@@ -1,0 +1,27 @@
+<Page
+    actionBarHidden="true"
+    class="page"
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <TabView androidTabsPosition="bottom">
+        <TabViewItem title="Learn" ios:iconSource="~/icons/offer.png" android:iconSource="~/icons/offer.png">
+            <Frame defaultPage="learn/learn-page"></Frame>
+        </TabViewItem>
+
+        <TabViewItem title="Teach" ios:iconSource="~/icons/demand.png" android:iconSource="~/icons/demand.png">
+            <Frame defaultPage="teach/teach-page"></Frame>
+        </TabViewItem>
+
+        <TabViewItem title="Search" ios:iconSource="~/icons/search.png" android:iconSource="~/icons/search.png">
+            <Frame defaultPage="search/search-page"></Frame>
+        </TabViewItem>
+
+        <TabViewItem title="Chat" ios:iconSource="~/icons/message.png" android:iconSource="~/icons/message.png">
+            <Frame defaultPage="chat/chat-page"></Frame>
+        </TabViewItem>
+
+        <TabViewItem title="Profile" ios:iconSource="~/icons/user.png" android:iconSource="~/icons/user.png">
+            <Frame defaultPage="profile/profile-page"></Frame>
+        </TabViewItem>
+    </TabView>
+</Page>

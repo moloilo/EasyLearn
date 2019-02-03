@@ -1,0 +1,13 @@
+<Page
+    class="page"
+    navigatingTo="onNavigatingTo"  
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar class="action-bar">
+        <Label class="action-bar-title" text="Teach"></Label>
+    </ActionBar>
+
+    <GridLayout class="page-content">
+        <Label class="page-placeholder" text="<!-- Teach page content goes here -->"></Label>
+    </GridLayout>
+</Page>
